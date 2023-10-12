@@ -11,7 +11,6 @@
 	<body>
 		<h1>Welcome</h1>
 		<p>Testing my new Website</p>
-		<a href="secret.html">About</a>
 		<form>
 			<label for="password"> Enter the password: </label>
 			<input type="password" id="password" />
@@ -21,6 +20,7 @@
 			function checkPswd() {
 				var password = document.getElementById("password").value;
 				if (password == "Dondo") {
+					alert(<a href="secret.html">Correct!</a>);
 					window.location.href = 'secret.html';
 				} else {
 					alert("INCORRECT PASSWORD!");
