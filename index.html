@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+
+
+	<!DOCTYPE html>
 	<html>
 	<head>
 		<title>
@@ -10,14 +12,15 @@
 		<h1>Welcome</h1>
 		<p>Testing my new Website</p>
 		<form>
-			<label for="pswd"> Enter the password: </label>
-			<input type="password" id="pswd">
-			<input type="button" value="Submit" onclick="checkPswd();" />
+			<label for="password"> Enter the password: </label>
+			<input type="password" id="password" />
+			<button type="submit" value="submit" id="submit" onclick="checkPswd()" />
 		</form>
+		<b>Submit</b>
 		<script>
 			function checkPswd() {
 				var confirmPassword = "Dondo";
-				var password = document.getElementById("pswd").value;
+				var password = document.getElementById("password").value;
 				if (password == confirmedPassword) {
 					window.location.replace("www.dondophan.com/secret.html");
 				} else {
