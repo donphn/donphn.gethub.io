@@ -7,7 +7,11 @@
 			Don Do's Website
 		</title>
 	</head>
-
+	<style>
+		body {
+			back-ground: blue;
+		}
+	</style>
 	<body>
 		<h1>Welcome</h1>
 		<p>Testing my new Website</p>
@@ -21,6 +25,7 @@
 				var password = document.getElementById("password").value;
 				if (password == "password") {
 					alert("Correct!");
+					window.location.href = 'secret.html';
 
 				} else {
 					alert("INCORRECT PASSWORD!");
