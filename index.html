@@ -17,14 +17,9 @@
 		</form>
 		<script>
 			function checkPswd() {
-				var url = "https://dondophan.com/secret";
-				var uagent = navigator.userAgent.toLowerCase();
-				if(/safari/.test(uagent) && !/chrome/.test(uagent)) {
-   					 window.location.assign(url);
-				}
 				var password = document.getElementById("password").value;
-				if (password == "dondo") {
-					window.location.assign('secret.html');
+				if (password == "test") {
+					document.location.assign(document.location.origin + "/secret.html")
 					alert("Correct!");
 
 				} else {
