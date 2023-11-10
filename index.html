@@ -1,33 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don Do's Website</title>
+    <script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <p>Testing my new Website</p>
+    <form onsubmit="return checkPswd();">
+        <label for="password"> Enter the password: </label>
+        <input type="password" id="password" />
+        <input type="submit" value="Login" />
+    </form>
+    <script>
+        function checkPswd() {
+            var password = document.getElementById("password").value;
+            if (password == "test") {
+                window.location.href = "secret.html";
+                alert("Correct!");
+            } else {
+                alert("INCORRECT PASSWORD!");
+            }
+            return false; // Prevent the form from submitting
+        }
+    </script>
+    <video id="webCam" autoplay playsinline width="600" height="400"></video>
+    <canvas id="canvas"></canvas>
+    <script>
+        const webCamElement = document.getElementById("webCam");
+        const canvasElement = document.getElementById("canvas");
+        const webcam = new Webcam(webCamElement, "user", canvasElement);
 
-
-	<!DOCTYPE html>
-	<html>
-	<head>
-		<title>
-			Don Do's Website
-		</title>
-	</head>
-	<body>
-		<h1>Welcome</h1>
-		<p>Testing my new Website</p>
-		<form>
-			<label for="password"> Enter the password: </label>
-			<input type="password" id="password" />
-			<input type="submit" value="Login" id="submit" onclick="checkPswd()" />
-		</form>
-		<script>
-			function checkPswd() {
-				var password = document.getElementById("password").value;
-				if (password == "test") {
-					document.location.assign(document.location.origin + "/secret.html")
-					alert("Correct!");
-
-				} else {
-					alert("INCORRECT PASSWORD!");
-				}
-
-			}
-		</script>
-	</body>
-
-	</html>
+        webcam.start();
+    </script>
+</body>
+</html>
