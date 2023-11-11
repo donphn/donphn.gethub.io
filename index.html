@@ -10,29 +10,32 @@
   <style>
     .passwordcontainer {
       position: absolute;
-      top: 50%;
-      left: 50%;
+      top: 23%;
+      left: 41.5%;
       transform: translate(-50%, -50%);
 
     }
     .test{
       position: absolute;
       top: 0%;
-      left: 50%;
+      left: 30%;
     }
     .vidbox{
       position: absolute;
-      top: 65%;
+      top: 30%;
       left: 25%;
     }
     .words {
-      right: 100px;
+      position: absolute;
+      left: 50%;
+      top: 50%
     }
   </style>
   <body>
     <div class="test">
-    <h1>Welcome</h1>
-    <p>Testing my new Website</p>
+    <h1>HIII!!</h1>
+    <p>This my website: </p>
+    <p2>make sure you allow camera :D </p2>
     </div>
     <div class="passwordcontainer">
     <form onsubmit="return checkPswd();">
@@ -55,9 +58,11 @@
   </script>
   <div class="vidbox">
     
-  <video id="webCam" autoplay playsinline width="600" height="400"></video>
+  <video id="webCam" autoplay playsinline width="800" height="400"></video>
   <canvas id="canvas"></canvas>
-  <p class="words"> ^ Stinky </p>
+</div>
+<div class="words">
+  <p style="font-size: 40px;">  ^ This person is stinky </p>
 </div>
   <script>
       const webCamElement = document.getElementById("webCam");
